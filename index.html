@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <title>Web Development</title>
+</head>
+<body>
+    <header>
+        <h1>Learn Basic Web Development!</h1>
+        <nav>
+            <ul>
+                <li><a href="Home">Home</a></li>
+                <li><a href="HTML">HTML</a></li>
+                <li><a href="CSS">CSS</a></li>
+                <li><a href="Question Bank">Question Bank</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <article>
+            <div class="tags" id="section1">
+                <h1>Welcome!</h1>
+                <a href="abotme.html"><img src="Images/welcome.png" onmouseover="easeIn(this);" onmouseout="easeOut(this);" width="100px"  height="100px" alt=""><a>
+                <p><span style="color:red;"><b>H</b></span>ey! My name is Michael, im glad you have found this page! What is the purpose of this page you might be asking? well being a young teenager it has always
+                been a dream of mine to become some kind of developer! so here I am making a dream come true!</p>
+                <p>Recently I tried to take a Microsoft Certification Exam for HTML5 and CSS3 and some Javascript! and I passed! Im here to help you acheive the same result. Together we can make you Microsoft certified!</p>
+                <p>How can this page help? this page has a number of diffrent resources as you can see within this page we touch on what these mythical markup languages are, oh and Javascript! There is then other pages where you can find out alot more and also practice some questions. I hope you enjoy reading as much as I enjoyed creating this site!</p>
+                <p> <a href="#section2" class="jump_scroll"><b>Want to learn about HTML5? Click Here!</b></a></p>
+            </div>
+        </article>
+        <article>
+            <div class="tags" id="section2">
+                <h1>What is HTML5?</h1>
+                <a href="markup.html"><img src="Images/html.png" onmouseover="easeIn(this);" onmouseout="easeOut(this);" width="100px"  height="100px" alt=""></a>
+                <p><span style="color:red;"><b>H</b></span>TML5 is what is known as a markup language, this is sometimes mistaken for a programming language, which is not the case. A markup language is a form of language in which we use tags such as: <img src="Images\headtag.png" id="head_tag" alt=""></p>
+                <p>These tags are used to describe the object we are placing on the web page. There is multiple tags that HTML5 use. We are going to talk about the most important ones for the Exam these are broken down into.
+                    <ul>
+                        <li>Displaying Text Using HTML.</li>
+                        <li>Displaying A Graphic Using HTML.</li>
+                        <li>Setting A Semantical Structure Using HTML.</li>
+                    </ul>
+                </p>
+                <p>Tags are super important within Web Development as choosing the correct tags will increase your SEO(Search engine optimization) in the long run. <a href="html.css">More on HTML here!</a></p>
+                <p> <a href="#section3" class="jump_scroll"><b>Want to learn about CSS3? Click Here!</b></a></p>
+                <p class="example_code"><b>Here is some Example code!</b></p>
+                <img src="Images/codesnippet.PNG" height="400px" width="500px" id="html_code" alt="">
+            </div>
+        </article>
+        <article>
+            <div class="tags" id="section3">
+                <h1>What is CSS3?</h1>
+                <a href="css.html"><img src="Images/css.png" onmouseover="easeIn(this);" onmouseout="easeOut(this);" width="100px"  height="100px" alt=""></a>
+                <p><span style="color:red;"><b>C</b></span>SS, also known as a cascading style sheet is a language in which we use to stlye the HTML of our page. CSS is used as a way to format a page, just like this one!</p>
+                <p>We use CSS by using 3 properties these include the :
+                    <ul>
+                        <li>Selector</li>
+                        <li>Property</li>
+                        <li>Value</li>
+                    </ul>
+                </p>
+                <p>We use the <strong>Selector</strong> to identify the HTML element we would like to target, we then use the <strong>Property</strong> to Style that element. For example, colour. We then set the <strong>Value</strong> to what we would like if it was colour we could say red.</p>
+                <p><a href="#section4" class="jump_scroll"><b>Want to learn about JAVASCRIPT? Click Here!</b></a></p>
+                <p class="example_code"><b>Here is some Example code!</b></p>
+                <img src="Images/codesnippetcss.PNG" id="css_snippet" alt="">
+            </div>
+        </article>
+        <article>
+            <div class="tags" id="section4">
+                <h1>What is Javascript?</h1>
+                <a href="js.html"><img src="Images/js.png" onmouseover="easeIn(this);" onmouseout="easeOut(this);" width="100px"  height="100px" alt=""></a>
+                <p><span style="color:red;"><b>L</b></span>orem ipsum dolor sit amet consectetur adipisicing elit. Assumenda deserunt reprehenderit distinctio dolore, nihil pariatur cupiditate maiores eos tenetur ab, at nulla sequi, dolor ipsum minus fuga voluptatibus expedita excepturi?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda deserunt reprehenderit distinctio dolore, nihil pariatur cupiditate maiores eos tenetur ab, at nulla sequi, dolor ipsum minus fuga voluptatibus expedita excepturi?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda deserunt reprehenderit distinctio dolore, nihil pariatur cupiditate maiores eos tenetur ab, at nulla sequi, dolor ipsum minus fuga voluptatibus expedita excepturi?</p>
+                <p> <a href="#section1" class="jump_scroll"><b>Want to go back to Welcome? Click Here!</b></a></p>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright &copy Michael Surgeon 2020</p>
+        <div id="socials">
+            <a href="https://www.facebook.com/michael.surgeon.3" target="_blank"><img src="Images/facebook.svg" width="30px" height="30px" alt="facebook"></a>
+            <a href="https://www.linkedin.com/in/michael-surgeon-594093198/" target="_blank"><img src="Images/linkedin.svg" width="30px" height="30px" alt="linkedin"></a>
+        </div>
+        <button onclick="darkMode();">Join the dark side!</button>
+    </footer>
+
+    <script>
+        function easeIn(x){
+            x.style.width = "120px";
+            x.style.height = "120px";
+        }
+
+        function easeOut(x){
+            x.style.width = "100px";
+            x.style.height = "100px";
+        }
+        //figure this dark mode thing out in the most efficent way.
+        function darkMode() {
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+        }
+    </script>
+    
+</body>
+</html>

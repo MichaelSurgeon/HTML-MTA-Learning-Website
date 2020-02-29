@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+
+body {
+    font-family: 'Spartan', sans-serif, Arial, Helvetica, sans-serif;
+    width: 70%;
+    margin: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header h1 {
+    font-family: 'Spartan', sans-serif;
+    text-align: center;
+    margin-bottom: 55px;
+    padding-top: 40px;
+}
+
+
+body>header>nav li {
+    display: inline-block;
+}
+
+
+body>header nav {
+    text-align: center;
+    height: 50px;
+}
+
+body>header>nav ul  {
+    padding: 0;
+}
+
+body>header>nav>ul a {
+    padding: 30px;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+}
+
+body>header>nav>ul a:hover {
+    background-color: gainsboro;
+    transition: 0.25s;
+}
+
+body>header {
+    background-color: #F8F8F8;
+}
+
+section>article h1 {
+    text-align: center;
+    margin: 0;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+section>article h1:first-child {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+section>article p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+section>article img {
+    display: block;
+    margin: auto;
+    padding: 20px;
+    transition: 0.25;
+}
+
+section>article img {
+    transition: 0.25s;
+}
+
+
+.jump_scroll {
+    color: #FF8040;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.jump_scroll:hover {
+    color: #C24641;
+}
+
+#html_code {
+    box-shadow: 13px 10px 21px -1px rgba(0,0,0,0.75);
+    margin-bottom: 70px;
+}
+
+#css_snippet {
+    box-shadow: 13px 10px 21px -1px rgba(0,0,0,0.75);
+    margin-bottom: 70px;
+}
+
+.example_code {
+    margin-top: 55px;
+}
+
+footer a {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1200px)
+{
+    body {
+        width: auto;
+    }
+
+    body>header nav {
+        width: auto;       
+    }
+
+    body>header>nav>ul a:hover {
+        background-color: gainsboro;
+        transition: 0.25s;
+    }
+
+    body>header>nav li {
+        display: inline;        
+    }
+
+    body>header>nav>ul a {
+        padding: 10px;
+    }
+
+    #html_code {
+        width: 350px;
+        height: 250px;
+    }
+    
+}
+
