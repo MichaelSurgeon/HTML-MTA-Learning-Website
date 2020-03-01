@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css">
+    <title>Web Development</title>
+</head>
+<body onload="init();">
+    <div id="alert">
+        <p><strong>Warning!</strong> Welcome To The Page! The inner web dev is currently working on this page.  <span class="closebtn" onclick="fadeOut(this);">&times;</span> </p>
+    </div>
+    <header id="section1">
+        <h1><strong>LEARN BASIC WEB DEVELOPMENT!</strong></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="CSS">CSS</a></li>
+                <li><a href="JS">JS</a></li>
+                <li><a href="Question Bank">Question Bank</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <div class="tags_markup">
+                <h1>Displaying Text Using HTML!</h1>
+            </div>
+        </article>
+        <article>
+            <div class="tags_markup">
+                <h1>Displaying A Graphic Using HTML!</h1>
+            </div>
+        </article>
+        <article>
+            <div class="tags_markup">
+                <h1>Setting A Semantical Structure Using HTML!</h1>
+            </div>
+        </article>
+        <article>
+            <div class="tags_markup">
+                <h1>Tags In HTML!</h1>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright &copy Michael Surgeon 2020</p>
+        <div id="socials">
+            <a href="https://www.facebook.com/michael.surgeon.3" target="_blank"><img src="Images/facebook.svg" width="30px" height="30px" alt="facebook"></a>
+            <a href="https://github.com/MichaelSurgeon" target="_blank"><img src="Images/github.svg" width="30px" height="30px" alt="github"></a>
+            <a href="https://www.linkedin.com/in/michael-surgeon-594093198/" target="_blank"><img src="Images/linkedin.svg" width="30px" height="30px" alt="linkedin"></a>
+        </div>
+        <button onclick="darkMode();">Join the dark side!</button>
+    </footer>
+
+    <script>
+        function init(){
+            var key = sessionStorage.getItem("Alert");
+
+            if(key === "false"){
+                document.getElementById("alert").style.display='none';
+            } else {
+                document.getElementById("alert").style.display='block';
+            }
+
+            document.location.hash = '';
+        }
+
+        function fadeOut(){
+            document.getElementById("alert").style.display='none';
+            sessionStorage.setItem('Alert', 'false');
+        }
+
+        function easeOut(x){
+            x.style.display = "none";
+        }
+
+        function easeIn(x){
+            x.style.width = "120px";
+            x.style.height = "120px";
+        }
+
+        function easeOut(x){
+            x.style.width = "100px";
+            x.style.height = "100px";
+        }
+        //figure this dark mode thing out in the most efficent way.
+        // function darkMode() {
+        //     var element = document.body;
+        //     element.classList.toggle("dark-mode");
+        // }
+    </script>
+    
+</body>
+</html>

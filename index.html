@@ -6,27 +6,30 @@
     <link rel="stylesheet" href="stylesheet.css" type="text/css">
     <title>Web Development</title>
 </head>
-<body>
-    <header>
-        <h1>Learn Basic Web Development!</h1>
+<body onload="init();">
+    <div id="alert">
+        <p><strong>Warning!</strong> Welcome To The Page! The inner web dev is currently working on this page.  <span class="closebtn" onclick="fadeOut(this);">&times;</span> </p>
+    </div>
+    <header id="section1">
+        <h1><strong>LEARN BASIC WEB DEVELOPMENT!</strong></h1>
         <nav>
             <ul>
-                <li><a href="Home">Home</a></li>
-                <li><a href="HTML">HTML</a></li>
+                <li><a href="markup.html">HTML</a></li>
                 <li><a href="CSS">CSS</a></li>
+                <li><a href="JS">JS</a></li>
                 <li><a href="Question Bank">Question Bank</a></li>
             </ul>
         </nav>
     </header>
-
     <section>
         <article>
-            <div class="tags" id="section1">
+            <div class="tags">
                 <h1>Welcome!</h1>
-                <a href="abotme.html"><img src="Images/welcome.png" onmouseover="easeIn(this);" onmouseout="easeOut(this);" width="100px"  height="100px" alt=""><a>
+                <a href="aboutme.html"><img src="Images/welcome.png" onmouseover="easeIn(this);" onmouseout="easeOut(this);" width="100px"  height="100px" alt="html"><a>
+                <p><strong>Click The Above Icon For Information On The Creator!</strong></p>
                 <p><span style="color:red;"><b>H</b></span>ey! My name is Michael, im glad you have found this page! What is the purpose of this page you might be asking? well being a young teenager it has always
                 been a dream of mine to become some kind of developer! so here I am making a dream come true!</p>
-                <p>Recently I tried to take a Microsoft Certification Exam for HTML5 and CSS3 and some Javascript! and I passed! Im here to help you acheive the same result. Together we can make you Microsoft certified!</p>
+                <p>Recently I took a Microsoft Certification Exam for HTML5 and CSS3 and some Javascript! and I passed! Im here to help you acheive the same result. Together we can make you Microsoft certified!</p>
                 <p>How can this page help? this page has a number of diffrent resources as you can see within this page we touch on what these mythical markup languages are, oh and Javascript! There is then other pages where you can find out alot more and also practice some questions. I hope you enjoy reading as much as I enjoyed creating this site!</p>
                 <p> <a href="#section2" class="jump_scroll"><b>Want to learn about HTML5? Click Here!</b></a></p>
             </div>
@@ -43,7 +46,7 @@
                         <li>Setting A Semantical Structure Using HTML.</li>
                     </ul>
                 </p>
-                <p>Tags are super important within Web Development as choosing the correct tags will increase your SEO(Search engine optimization) in the long run. <a href="html.css">More on HTML here!</a></p>
+                <p>Tags are super important within Web Development as choosing the correct tags will increase your SEO(Search engine optimization) in the long run. <a href="markup.html" id="more_html">More on HTML here!</a></p>
                 <p> <a href="#section3" class="jump_scroll"><b>Want to learn about CSS3? Click Here!</b></a></p>
                 <p class="example_code"><b>Here is some Example code!</b></p>
                 <img src="Images/codesnippet.PNG" height="400px" width="500px" id="html_code" alt="">
@@ -71,10 +74,19 @@
             <div class="tags" id="section4">
                 <h1>What is Javascript?</h1>
                 <a href="js.html"><img src="Images/js.png" onmouseover="easeIn(this);" onmouseout="easeOut(this);" width="100px"  height="100px" alt=""></a>
-                <p><span style="color:red;"><b>L</b></span>orem ipsum dolor sit amet consectetur adipisicing elit. Assumenda deserunt reprehenderit distinctio dolore, nihil pariatur cupiditate maiores eos tenetur ab, at nulla sequi, dolor ipsum minus fuga voluptatibus expedita excepturi?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda deserunt reprehenderit distinctio dolore, nihil pariatur cupiditate maiores eos tenetur ab, at nulla sequi, dolor ipsum minus fuga voluptatibus expedita excepturi?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda deserunt reprehenderit distinctio dolore, nihil pariatur cupiditate maiores eos tenetur ab, at nulla sequi, dolor ipsum minus fuga voluptatibus expedita excepturi?</p>
+                <p><span style="color:red;"><b>J</b></span>avascript is what us web developers call a scripting language. Im relativley new to it, although from what I know it looks like so much fun to learn!</p>
+                <p>JS is typically used in the same way any other programming language is. It consists of functions in which we then use in the HTML to include interactivity or more back end work. </p>
+                <p>Why should we use Javascript?
+                    <ul>
+                        <li>It allows us to create responsive web pages</li>
+                        <li>It allows us to create interactive sites</li>
+                        <li>It is starting to be used for back end web dev</li>
+                    </ul>
+                </p>
+                <p>Much like CSS, Javascript can be called from a standalone .js file within the HTML code. Making our code more attractive and cleaner.</p>
                 <p> <a href="#section1" class="jump_scroll"><b>Want to go back to Welcome? Click Here!</b></a></p>
+                <p class="example_code"><b>Here is some Example code!</b></p>
+                <img src="Images/codesnippetjs.PNG" id="js_snippet" alt="">
             </div>
         </article>
     </section>
@@ -83,12 +95,34 @@
         <p>Copyright &copy Michael Surgeon 2020</p>
         <div id="socials">
             <a href="https://www.facebook.com/michael.surgeon.3" target="_blank"><img src="Images/facebook.svg" width="30px" height="30px" alt="facebook"></a>
+            <a href="https://github.com/MichaelSurgeon" target="_blank"><img src="Images/github.svg" width="30px" height="30px" alt="github"></a>
             <a href="https://www.linkedin.com/in/michael-surgeon-594093198/" target="_blank"><img src="Images/linkedin.svg" width="30px" height="30px" alt="linkedin"></a>
         </div>
         <button onclick="darkMode();">Join the dark side!</button>
     </footer>
 
     <script>
+        function init(){
+            var key = sessionStorage.getItem("Alert");
+
+            if(key === "false"){
+                document.getElementById("alert").style.display='none';
+            } else {
+                document.getElementById("alert").style.display='block';
+            }
+
+            document.location.hash = '';
+        }
+
+        function fadeOut(){
+            document.getElementById("alert").style.display='none';
+            sessionStorage.setItem('Alert', 'false');
+        }
+
+        function easeOut(x){
+            x.style.display = "none";
+        }
+
         function easeIn(x){
             x.style.width = "120px";
             x.style.height = "120px";
