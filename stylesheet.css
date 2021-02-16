@@ -136,6 +136,15 @@ section>article img {
 }
 
 /* CLASSES */
+.tags_markup a {
+    color: #FF8040;
+    list-style-type: none;
+}
+
+.tags_markup a::hover {
+    color: #ff0800;
+}
+
 .closebtn {
     font-size: 2em;
 }
