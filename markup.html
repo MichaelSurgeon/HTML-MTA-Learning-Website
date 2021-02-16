@@ -15,37 +15,69 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="CSS">CSS</a></li>
-                <li><a href="JS">JS</a></li>
-                <li><a href="Question Bank">Question Bank</a></li>
+                <li><a href="css.html">CSS</a></li>
+                <li><a href="js.html">JS</a></li>
+                <li><a href="questionbank.html">Question Bank</a></li>
             </ul>
         </nav>
     </header>
     <section>
         <article>
             <div class="tags_markup">
+                <h1>The Basic Structure of HTML!</h1>
+                <p><span style="color:red"><b>T</b></span>he basic structure of <span style="color:red"><b>HTML</b></span> is relativley simple, basically we have to declare what the document is we are creating this being HTML. We then have to include what language we are setting. After that is complete we can then set our <span style="color:red"><b>Head tag</b></span> this is where the <span style="color:red"><b>Meta</b></span> data for our site is contained.</head> We then have our <span style="color:red"><b>Body tag</b></span> thats where the majority of our HTML code is written below is some good resources.</p>
+                <ul>
+                    <li><a href="https://www.htmlquick.com/tutorials/document-structure.html#the-basic-structure">The Basic Structure</a>                   </li>
+                    <li><a href="https://www.w3schools.com/tags/tag_head.asp#:~:text=The%20element%20is%20a,scripts%2C%20and%20other%20meta%20information.">Head Tag</a></li>
+                    <li><a href="https://www.w3schools.com/tags/tag_body.asp#:~:text=The%20tag%20defines%20the,element%20in%20an%20HTML%20document.">Body Tag</a></li>
+                    <li><a href="https://www.w3schools.com/tags/tag_meta.asp#:~:text=The%20tag%20defines%20metadata,data%20(information)%20about%20data.&text=Metadata%20will%20not%20be%20displayed,)%2C%20and%20other%20web%20services.">Metadata</a></li>
+                </ul>
+                <p class="example_code"><b>Here is some Example code!</b></p>
+                <img src="Images/htmlstructure.PNG" id="js_snippet" alt="">
+            </div>
+        </article>
+        <article>
+            <div class="tags_markup">
                 <h1>Displaying Text Using HTML!</h1>
+                <p><span style="color:red"><b>T</b></span>here is many ways we can display text, there is many different tags the reason for this is as you know we can display text in differnt formats such as <b>Bold</b> and <i>Italic</i> for example. And for things such as paragraphs there is a tag for that. Below is an image of formatting elements that are commonly used to display text.</p> 
+                <img src="Images/texttags.PNG" id="js_snippet" alt="">
+                <p>As you can see there is multiple ways in which we can use text and also format it, it is all dependant on the site you are looking to make.</p>
+                <p class="example_code"><b>Here is some Example code!</b></p>
+                <img src="Images/texttagsexample.PNG" id="js_snippet" alt="">
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/html_formatting.asp">Click here for a good text resource!</a></li>
+                </ul>
             </div>
         </article>
         <article>
             <div class="tags_markup">
-                <h1>Displaying A Graphic Using HTML!</h1>
+                <h1>Displaying A Graphic/Image Using HTML!</h1>
+                <p><span style="color:red"><b>T</b></span>his is a bit more intresting right? displaying images are really easy in HTML and are nothing to be scared of! they also have great features such as different display options and styles, you can boost your SEO with alt names aswell they are very useful! In HTML you have an IMG tag this tag allows you to specify:</p>
+                <ul>
+                    <li>The SRC Attribute - This is the source location of your image</li>
+                    <li>The ALT Attribute - This allows you to specific an alternate name for your image</li>
+                </ul>
+                <p class="example_code"><b>Here is some Example code!</b></p>
+                <img src="Images/imgtag.PNG" id="js_snippet" alt="the img tag">
+                <ul>
+                    <li><a href="https://www.w3schools.com/html/html_images.asp">Click here for a good image resource!</a></li>
+                </ul>
             </div>
         </article>
         <article>
             <div class="tags_markup">
-                <h1>Setting A Semantical Structure Using HTML!</h1>
-            </div>
-        </article>
-        <article>
-            <div class="tags_markup">
-                <h1>Tags In HTML!</h1>
+                <h1><span style="color:red"><b>S</b></span>etting A Semantical Structure Using HTML!</h1>
+                <p>Semantic Structure is very important in web design for the page to be organised and your code to be clean, we can make our website follow a Semantic structure by using Semantical Elements, think of it like a word document you have a <span style="color:red"><b>Head</b></span>, <span style="color:red"><b>Body</b></span> and <span style="color:red"><b>Footer</b></span> thats the structure its very similar. Below is an example of this type of structure interms of HTML.</p>
+                <p class="example_code"><b>Here is an example!</b></p>
+                <img src="Images/semanticstructure.PNG" id="js_snippet" alt="the semantics tag">
+                <p>This is very important in terms of design as it allows you to code more efficiently as everything is blocked togetehr in containers or divs. Below you can see an image of the tags we would typically use for this type of structure:</p>
+                <img src="Images/semanticelements.PNG" id="js_snippet" alt="the semantics tag">
+                <p>This type of structure also will allow you to design your website on paper before you then go on to create a website which can be a huge help!<p/>
             </div>
         </article>
     </section>
-
     <footer>
-        <p>Copyright &copy Michael Surgeon 2020</p>
+        <p>Copyright &copy Michael Surgeon 2021</p>
         <div id="socials">
             <a href="https://www.facebook.com/michael.surgeon.3" target="_blank"><img src="Images/facebook.svg" width="30px" height="30px" alt="facebook"></a>
             <a href="https://github.com/MichaelSurgeon" target="_blank"><img src="Images/github.svg" width="30px" height="30px" alt="github"></a>
@@ -53,7 +85,6 @@
         </div>
         <button onclick="darkMode();">Join the dark side!</button>
     </footer>
-
     <script>
         function init(){
             var key = sessionStorage.getItem("Alert");
